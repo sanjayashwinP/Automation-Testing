@@ -68,17 +68,13 @@ driver.get("https://www.amazon.in/")
 
 time.sleep(3)
 
-# Click Account & Lists
 login = driver.find_element(By.ID, "nav-link-accountList")
 login.click()
 
 time.sleep(3)
 
-# Enter email or mobile
 email = driver.find_element(By.ID, "ap_email_login")
 email.send_keys("8667781757")
-
-# Click Continue
 continue_button = driver.find_element(
     By.XPATH, "//input[@type='submit']"
 )
@@ -86,13 +82,11 @@ continue_button.click()
 
 time.sleep(3)
 
-# Enter password
 password = driver.find_element(By.ID, "ap_password")
 password.send_keys("sanjay@amazon")
 
 print("Password entered")
 
-# Click Sign-In
 sign_in = driver.find_element(By.ID, "signInSubmit")
 sign_in.click()
 
